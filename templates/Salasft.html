@@ -1,0 +1,213 @@
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/bootstrap-reboot.min.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/style.css')}}" type="text/css">
+        
+        <title>Sobre o Prédio</title>
+    </head>
+
+    <style>
+
+
+
+
+.dropdown-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.dropdown-li {
+    float: left;
+}
+
+.dropdown-li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-li a:hover, .dropdown:hover, .dropbtn {
+    background-color: red;
+}
+
+.dropdown-li{
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a  {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+</style> 
+
+    <body>
+    	<header class="header"> 
+                
+                <div class="top-header" onClick="">
+                    <a href="/home" class="logo"><img src="static/img/logo_insper.png" alt="Logo Insper"></a>
+                </div>
+
+
+                <ul class="dropdown-ul">
+                    <li class="dropdown-li"><a href="/home">Home</a></li>
+                    <li class="dropdown-li"><a href="/salas">Sobre o Prédio</a></li>
+                    <li class="dropdown-li"><a href="/painel">Painel de aulas</a></li>
+                    <li class="dropdown-li"><a href="/achados_perdidos">Achados e Perdidos</a></li>
+                    <li class="dropdown dropdown-li">
+                        <a href="/entidades" class="dropbtn">Entidades</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-a" href="/entidade/aisec"><p class="dropdown-item">AIESEC</p></a>
+                            <a class="dropdown-a" href="/entidade/atletica"><p class="dropdown-item">Associação Atlética</p></a>
+                            <a class="dropdown-a" href="/entidade/bateriaimperial"><p class="dropdown-item">Bateria Imperial</p></a>
+                            <a class="dropdown-a" href="/entidade/bemgasto"><p class="dropdown-item">Bem Gasto </p></a>
+                            <a class="dropdown-a" href="/entidade/blockchain"><p class="dropdown-item">Blockchain</p></a>
+                            <a class="dropdown-a" href="/entidade/consilium"><p class="dropdown-item">Consilium </p></a>
+                            <a class="dropdown-a" href="/entidade/diretorioacademico"><p class="dropdown-item">Diretório Acadêmico(D.A.)</p></a>
+                            <a class="dropdown-a" href="/entidade/smash"><p class="dropdown-item">SMASH </p></a>
+                            <a class="dropdown-a" href="/entidade/gas"><p class="dropdown-item">Grupo de Ação Social – GAS </p></a>
+                            <a class="dropdown-a" href="/entidade/enactus"><p class="dropdown-item">Enactus </p></a>
+                            <a class="dropdown-a" href="/entidade/foxbaja"><p class="dropdown-item">Fox Baja </p></a>
+                            <a class="dropdown-a" href="/entidade/infinance"><p class="dropdown-item">InFinance</p></a>
+                            <a class="dropdown-a" href="/entidade/insperjr"><p class="dropdown-item">Insper Junior Consulting</p></a>
+                            <a class="dropdown-a" href="/entidade/ligadeempreendedores"><p class="dropdown-item">Liga de Empreendedores </p></a>
+                            <a class="dropdown-a" href="/entidade/madfox"><p class="dropdown-item">MadFox</p></a>
+                            <a class="dropdown-a" href="/entidade/marianneferber"><p class="dropdown-item">Marianne Ferber </p></a>
+                            <a class="dropdown-a" href="/entidade/inspride"><p class="dropdown-item">Inspride</p></a>
+                            <a class="dropdown-a" href="/entidade/vegacultural"><p class="dropdown-item">Vega Cultural</p></a>
+                            <a class="dropdown-a" href="/entidade/designchallenge"><p class="dropdown-item">Design Challenge</p></a>
+                            <a class="dropdown-a" href="/entidade/agroinsper"><p class="dropdown-item">AgroInsper</p></a>
+                            <a class="dropdown-a" href="/entidade/greeninsper"><p class="dropdown-item">Green Insper</p></a>
+                            <a class="dropdown-a" href="/entidade/insperliber"><p class="dropdown-item">Insper Liber</p></a>
+                            <a class="dropdown-a" href="/entidade/insperpost"><p class="dropdown-item">Insper Post</p></a>
+                        </div>
+                    </li>
+                    <li class="dropdown-li"><a href="/contato">Contato</a></li>
+                    
+                </ul>
+
+
+                <h2 class="title">Sobre o prédio</h2>
+
+
+
+                
+
+
+            </header>
+
+
+            <div>
+            <h1>Sobre o Prédio</h1>
+
+            <h2>Mapa das Salas</h2>
+            <form action="/salasft" method="POST">            
+                <label>Escolha uma sala:
+                <input type='text' list="browsers" name="sala" placeholder="Nome da Sala" /></label>
+                <datalist id="browsers">
+                    <select name="nomeMenu" size="7">
+                    <optgroup label="1º Andar">
+                        <option value="Amador Aguiar">1º Andar</option>
+                        <option value="Jorge Paulo Lemann">1º Andar</option>
+                        <option value="José Ermírio de Moraes Filho">1º Andar</option>
+                        <option value="Olavo Setubal">1º Andar</option>
+                        <option value="Sebastião Camargo">1º Andar</option>
+                        <option value="Walther Moreira Salles">1º Andar</option>
+                    </optgroup>
+                 
+                    <optgroup label="2º Andar">
+                        <option value="Sala 201">2º Andar</option>
+                        <option value="Sala 202">2º Andar</option>
+                        <option value="Sala 203">2º Andar</option>
+                        <option value="Sala 204">2º Andar</option>
+                        <option value="Sala 205">2º Andar</option>
+                        <option value="Sala 206">2º Andar</option>
+                        <option value="Alberto Bandeira de Queiroz">2º Andar</option>
+                        <option value="Graber">2º Andar</option>
+                        <option value="Marcos Lopes">2º Andar</option>
+                        <option value="Mario Heberfeld">2º Andar</option>
+                        <option value="Octavio Gouvea de Bulhões">2º Andar</option>
+                        <option value="Otto Lara">2º Andar</option>
+                        <option value="Paulo Renato Souza">2º Andar</option>
+                        <option value="Peter Drucker">2º Andar</option>
+                        <option value="Souza Dantas">2º Andar</option>
+                    </optgroup>
+
+                    <optgroup label="3º Andar">
+                        <option value="Sala 302">3º Andar</option>
+                        <option value="Sala 308">3º Andar</option>
+                        <option value="BM&F Bovespa 1">3º Andar</option>
+                        <option value="BM&F Bovespa 2">3º Andar</option>
+                        <option value="Eudoro Villela">3º Andar</option>
+                        <option value="Eugênio Gudin">3º Andar</option>
+                        <option value="Francisca J P de Albuquerque Moraes">3º Andar</option>
+                        <option value="João Gerdau">3º Andar</option>
+                        <option value="Max Feffer">3º Andar</option>
+                        <option value="Roberto Simonsen">3º Andar</option>
+                        <option value="Vicente Falconi Campos">3º Andar</option>
+                        <option value="Victor Civita">3º Andar</option>
+                    </optgroup>
+
+                    <optgroup label="4º Andar">
+                        <option value="Sala 405">4º Andar</option>
+                        <option value="Sala 406">4º Andar</option>
+                        <option value="Sala 407">4º Andar</option>
+                        <option value="Sala 408">4º Andar</option>
+                        <option value="Sala 409">4º Andar</option>
+                        <option value="Sala 410">4º Andar</option>
+                        <option value="401 – Laboratório Física e Instrumentação">4º Andar</option>
+                        <option value="404 – Laboratório de Informática">4º Andar</option>
+                        <option value="Laboratório FAB LAB">4º Andar</option>
+                        <option value="Laboratório de Ciências Térmicas">4º Andar</option>
+                        <option value="Laboratório de Física e Instrumentação">4º Andar</option>
+                        <option value="Laboratório de Materiais e Fenômenos de Transporte">4º Andar</option>
+                        <option value="Laboratório de Química">4º Andar</option>
+                        <option value="Laboratório de Sistemas Eletrônicos">4º Andar</option>
+                    </optgroup>
+                    </select>
+                </datalist>
+                
+                <input type="submit" value="Encontrar">
+
+                <h2>{{andar}}</h2>
+                <h3>{{nome_sala}}</h3>
+
+                <img src=" {{ url_for('static',filename='img/'+planta_sala) }} " alt="Mapa Insper" width=600 height=260>
+
+
+
+            </form>
+
+
+        </div>
+
+    </body>
+</html>

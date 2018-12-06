@@ -1,0 +1,58 @@
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/bootstrap-reboot.min.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/style.css')}}" type="text/css">
+        <title>Comunidade Insper</title>
+    </head>
+
+
+
+
+
+               
+
+                <div>
+                  <h1>Faça o seu cadastro</h1>
+                   <h2 class="title">Cadastro</h2>
+                  <br>
+                  <form action="/mensagem" method="POST">
+                    <input type="text" placeholder="Username" name="username1" value="{{
+                      request.form.username1 }}">
+                     <input type="password" placeholder="Password" name="password1" value="{{
+                      request.form.password1 }}">
+                    <input class="btn btn-default" type="submit" value="Criar Conta">
+                  </form>
+                  {% if error %}
+                    <p class="error"><strong>Error:</strong> {{ error }}
+                  {% endif %}
+
+                
+                  <a href="/"><p>voltar</p></a>
+
+
+                </div>
+
+
+
+
+
+                
+
+
+
+                
+
+
+
+            </header>
+
+
+
+
+
+
+    	
+
+    </body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/bootstrap-reboot.min.css')}}" type="text/css">
+        <link rel="stylesheet" href="{{url_for('static',filename='style/style.css')}}" type="text/css">
+
+		<title>Entidades</title>
+
+	</head>
+	
+
+
+
+<style>
+
+
+
+
+.dropdown-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.dropdown-li {
+    float: left;
+}
+
+.dropdown-li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-li a:hover, .dropdown:hover, .dropbtn {
+    background-color: red;
+}
+
+.dropdown-li{
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a  {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+</style> 
+        <body>
+            <header class="header"> 
+                
+                <div class="top-header" onClick="">
+                    <a href="/home" class="logo"><img src="static/img/logo_insper.png" alt="Logo Insper"></a>
+                </div>
+
+
+                <ul class="dropdown-ul">
+                    <li class="dropdown-li"><a href="/home">Home</a></li>
+                    <li class="dropdown-li"><a href="/salas">Sobre o Prédio</a></li>
+                    <li class="dropdown-li"><a href="/painel">Painel de aulas</a></li>
+                    <li class="dropdown-li"><a href="/achados_perdidos">Achados e Perdidos</a></li>
+                    <li class="dropdown dropdown-li">
+                        <a href="/entidades" class="dropbtn">Entidades</a>
+                        <div class="dropdown-content">
+                            <a class="dropdown-a" href="/entidade/aisec"><p class="dropdown-item">AIESEC</p></a>
+                            <a class="dropdown-a" href="/entidade/atletica"><p class="dropdown-item">Associação Atlética</p></a>
+                            <a class="dropdown-a" href="/entidade/bateriaimperial"><p class="dropdown-item">Bateria Imperial</p></a>
+                            <a class="dropdown-a" href="/entidade/bemgasto"><p class="dropdown-item">Bem Gasto </p></a>
+                            <a class="dropdown-a" href="/entidade/blockchain"><p class="dropdown-item">Blockchain</p></a>
+                            <a class="dropdown-a" href="/entidade/consilium"><p class="dropdown-item">Consilium </p></a>
+                            <a class="dropdown-a" href="/entidade/diretorioacademico"><p class="dropdown-item">Diretório Acadêmico(D.A.)</p></a>
+                            <a class="dropdown-a" href="/entidade/smash"><p class="dropdown-item">SMASH </p></a>
+                            <a class="dropdown-a" href="/entidade/gas"><p class="dropdown-item">Grupo de Ação Social – GAS </p></a>
+                            <a class="dropdown-a" href="/entidade/enactus"><p class="dropdown-item">Enactus </p></a>
+                            <a class="dropdown-a" href="/entidade/foxbaja"><p class="dropdown-item">Fox Baja </p></a>
+                            <a class="dropdown-a" href="/entidade/infinance"><p class="dropdown-item">InFinance</p></a>
+                            <a class="dropdown-a" href="/entidade/insperjr"><p class="dropdown-item">Insper Junior Consulting</p></a>
+                            <a class="dropdown-a" href="/entidade/ligadeempreendedores"><p class="dropdown-item">Liga de Empreendedores </p></a>
+                            <a class="dropdown-a" href="/entidade/madfox"><p class="dropdown-item">MadFox</p></a>
+                            <a class="dropdown-a" href="/entidade/marianneferber"><p class="dropdown-item">Marianne Ferber </p></a>
+                            <a class="dropdown-a" href="/entidade/inspride"><p class="dropdown-item">Inspride</p></a>
+                            <a class="dropdown-a" href="/entidade/vegacultural"><p class="dropdown-item">Vega Cultural</p></a>
+                            <a class="dropdown-a" href="/entidade/designchallenge"><p class="dropdown-item">Design Challenge</p></a>
+                            <a class="dropdown-a" href="/entidade/agroinsper"><p class="dropdown-item">AgroInsper</p></a>
+                            <a class="dropdown-a" href="/entidade/greeninsper"><p class="dropdown-item">Green Insper</p></a>
+                            <a class="dropdown-a" href="/entidade/insperliber"><p class="dropdown-item">Insper Liber</p></a>
+                            <a class="dropdown-a" href="/entidade/insperpost"><p class="dropdown-item">Insper Post</p></a>
+                        </div>
+                    </li>
+                    <li class="dropdown-li"><a href="/contato">Contato</a></li>
+                    
+                </ul>
+
+
+
+
+
+                <ul class="dropdown-ul">
+                    <li class="dropdown-li"><a href="#Avisos">Avisos</a></li>
+                    <li class="dropdown-li"><a href="#Sobreaentidade">Sobre a entidade</a></li>
+                </ul>
+
+
+
+            </header>
+
+            <section id="Avisos">
+            <h2>Avisos</h2>
+
+            <h3>) Considerando o modelo elétrico de um Amplificador Operacional, conforme figura abaixo, responda
+aos itens de a) a c).
+Supondo que a tensão V1 (em relação ao terra) é de 2,1𝑉, que a tensão V2 é de 2𝑉, e que o ganho do
+AmpOp é 𝐴 = 1000, qual seria a tensão Vo, independentemente da alimentação do AmpOp? Dado que
+as tensões de alimentação do AmpOp (+Vcc e -Vcc) são, respectivamente +5V e -5V, qual é, efetivamente,
+a tensão Vo?
+2) O circuito abaixo é um detector de luminosidade que contém um Amplificador Operacional que pode
+ser considerado ideal, alimentado por uma fonte não ilustrada na figura, de ±12𝑉. Considerando que a
+incidência de luz sobre o LDR (resistor sensível à luz) resulta em uma resistência de 1𝑘Ω, como ilustrado,
+responda:
+V1
+V2
+AVd
++Vcc = 12V
+-Vcc = -12V
+Vd
+Vo
+Dados do Modelo do
+AmpOp:
+𝑅𝑖 = 100𝑀Ω
+𝑅𝑜 = 100Ω
+𝐴 = 100
+a) O LED está aceso ou apagado? Justifique sua resposta!
+b) Caso a incidência de luz caia à menor intensidade, a resistência no LDR será 16𝑘Ω. Nesta situação,
+o LED estará aceso ou apagado? Justifique sua resposta!
+c) Considerando que a saída do AmpOp tenha tensão de −12𝑉 e que a DDP no LED seja de 2𝑉, qual
+a corrente elétrica no LED?
+3) Nosso laboratório tem disponível uma grande quantidade de capacitores de 10𝜇𝐹 com tensão limite
+de 300V. Contudo, nosso projeto precisa de um capacitor de 40𝜇𝐹 com limite de 600V. Precisamos
+compra-lo ou podemos usar os capacitores que temos? Quantos seriam necessários?
+4) Um aluno do curso de Acionamentos Elétricos do ano passado apresentou o diagrama abaixo como
+proposta para o seu primeiro projeto. Segundo ele, o capacitor desempenha um papel crucial no
+circuito, pois permitirá um certo “delay” no acionamento de uma lâmpada de alta corrente.
+Em relação a este circuito, alimentado por uma fonte DC ligada há algum tempo, responda às perguntas
+que seguem.
+a) A lâmpada está ligada ou desligada? Justifique sua resposta.
+b) Qual a carga acumulada, em Coulombs, no capacitor de 10𝜇𝐹? Considere que o AmpOp é ideal.
+𝑉𝐶𝐸
+c) Suponha que a lâmpada está ligada. Considerando que a tensão 𝑉𝐶𝐸 no transistor é 2V e que a
+resistência da lâmpada é 10Ω, qual a potência consumida pela lâmpada?) Considerando o modelo elétrico de um Amplificador Operacional, conforme figura abaixo, responda
+aos itens de a) a c).
+Supondo que a tensão V1 (em relação ao terra) é de 2,1𝑉, que a tensão V2 é de 2𝑉, e que o ganho do
+AmpOp é 𝐴 = 1000, qual seria a tensão Vo, independentemente da alimentação do AmpOp? Dado que
+as tensões de alimentação do AmpOp (+Vcc e -Vcc) são, respectivamente +5V e -5V, qual é, efetivamente,
+a tensão Vo?
+2) O circuito abaixo é um detector de luminosidade que contém um Amplificador Operacional que pode
+ser considerado ideal, alimentado por uma fonte não ilustrada na figura, de ±12𝑉. Considerando que a
+incidência de luz sobre o LDR (resistor sensível à luz) resulta em uma resistência de 1𝑘Ω, como ilustrado,
+responda:
+V1
+V2
+AVd
++Vcc = 12V
+-Vcc = -12V
+Vd
+Vo
+Dados do Modelo do
+AmpOp:
+𝑅𝑖 = 100𝑀Ω
+𝑅𝑜 = 100Ω
+𝐴 = 100
+a) O LED está aceso ou apagado? Justifique sua resposta!
+b) Caso a incidência de luz caia à menor intensidade, a resistência no LDR será 16𝑘Ω. Nesta situação,
+o LED estará aceso ou apagado? Justifique sua resposta!
+c) Considerando que a saída do AmpOp tenha tensão de −12𝑉 e que a DDP no LED seja de 2𝑉, qual
+a corrente elétrica no LED?
+3) Nosso laboratório tem disponível uma grande quantidade de capacitores de 10𝜇𝐹 com tensão limite
+de 300V. Contudo, nosso projeto precisa de um capacitor de 40𝜇𝐹 com limite de 600V. Precisamos
+compra-lo ou podemos usar os capacitores que temos? Quantos seriam necessários?
+4) Um aluno do curso de Acionamentos Elétricos do ano passado apresentou o diagrama abaixo como
+proposta para o seu primeiro projeto. Segundo ele, o capacitor desempenha um papel crucial no
+circuito, pois permitirá um certo “delay” no acionamento de uma lâmpada de alta corrente.
+Em relação a este circuito, alimentado por uma fonte DC ligada há algum tempo, responda às perguntas
+que seguem.
+a) A lâmpada está ligada ou desligada? Justifique sua resposta.
+b) Qual a carga acumulada, em Coulombs, no capacitor de 10𝜇𝐹? Considere que o AmpOp é ideal.
+𝑉𝐶𝐸
+c) Suponha que a lâmpada está ligada. Considerando que a tensão 𝑉𝐶𝐸 no transistor é 2V e que a
+resistência da lâmpada é 10Ω, qual a potência consumida pela lâmpada?) Considerando o modelo elétrico de um Amplificador Operacional, conforme figura abaixo, responda
+aos itens de a) a c).
+Supondo que a tensão V1 (em relação ao terra) é de 2,1𝑉, que a tensão V2 é de 2𝑉, e que o ganho do
+AmpOp é 𝐴 = 1000, qual seria a tensão Vo, independentemente da alimentação do AmpOp? Dado que
+as tensões de alimentação do AmpOp (+Vcc e -Vcc) são, respectivamente +5V e -5V, qual é, efetivamente,
+a tensão Vo?
+2) O circuito abaixo é um detector de luminosidade que contém um Amplificador Operacional que pode
+ser considerado ideal, alimentado por uma fonte não ilustrada na figura, de ±12𝑉. Considerando que a
+incidência de luz sobre o LDR (resistor sensível à luz) resulta em uma resistência de 1𝑘Ω, como ilustrado,
+responda:
+V1
+V2
+AVd
++Vcc = 12V
+-Vcc = -12V
+Vd
+Vo
+Dados do Modelo do
+AmpOp:
+𝑅𝑖 = 100𝑀Ω
+𝑅𝑜 = 100Ω
+𝐴 = 100
+a) O LED está aceso ou apagado? Justifique sua resposta!
+b) Caso a incidência de luz caia à menor intensidade, a resistência no LDR será 16𝑘Ω. Nesta situação,
+o LED estará aceso ou apagado? Justifique sua resposta!
+c) Considerando que a saída do AmpOp tenha tensão de −12𝑉 e que a DDP no LED seja de 2𝑉, qual
+a corrente elétrica no LED?
+3) Nosso laboratório tem disponível uma grande quantidade de capacitores de 10𝜇𝐹 com tensão limite
+de 300V. Contudo, nosso projeto precisa de um capacitor de 40𝜇𝐹 com limite de 600V. Precisamos
+compra-lo ou podemos usar os capacitores que temos? Quantos seriam necessários?
+4) Um aluno do curso de Acionamentos Elétricos do ano passado apresentou o diagrama abaixo como
+proposta para o seu primeiro projeto. Segundo ele, o capacitor desempenha um papel crucial no
+circuito, pois permitirá um certo “delay” no acionamento de uma lâmpada de alta corrente.
+Em relação a este circuito, alimentado por uma fonte DC ligada há algum tempo, responda às perguntas
+que seguem.
+a) A lâmpada está ligada ou desligada? Justifique sua resposta.
+b) Qual a carga acumulada, em Coulombs, no capacitor de 10𝜇𝐹? Considere que o AmpOp é ideal.
+𝑉𝐶𝐸
+c) Suponha que a lâmpada está ligada. Considerando que a tensão 𝑉𝐶𝐸 no transistor é 2V e que a
+resistência da lâmpada é 10Ω, qual a potência consumida pela lâmpada?</h3>
+
+            </section>
+
+            <section id="Sobreaentidade">
+
+            <h2>Sobre a Entidade</h2>
+
+            <img src="{{url_for('static',filename='img/'+img)}}" alt="Logo Entidade" width=290 height=120>
+
+            <p>{{descricao}}</p>
+ 
+            <h3>Membros:</h3>
+            <h3>Patriocinios:</h3>
+            <h3>Projetos:</h3>
+            <h3>Contato:</h3>
+
+            </section>
+
+
+	</body>
+</html>>
