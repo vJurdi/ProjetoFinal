@@ -148,38 +148,18 @@
             <h2>Itens Perdidos</h2>
             <ul class="ul">
             {% for item in itens %}
-                {% if not item['encontrado'] %}
+                
                 <li class="li">
                     <h3 class="h3">{{ item['item'] }}</h3>
                     <p class="p">{{ item['data'] }}</p>
                     <p class="p">{{item['nome']}}</p>
                     <p class="p">{{item['lugar']}}</p>
-                    <form action="/achados_perdidos" method="POST">
-                        <input type="hidden" name="id" value="{{ item['id'] }}">
-                        <input type="hidden" name="encontrado" value="True">
-                        <input type="submit" value="&#10003;"></form>
-                    </form>
                 </li>
-                {% endif %}
+        
             {% endfor %}
             </ul>
 
-            <h2>Itens Encontrados</h2>
-            <ul class="concluidas">
-            {% for item in itens %}
-                {% if item['feito'] %}
-                <li class="li">
-                    <h3 class="h3">{{ item['item'] }}</h3>
-                    <p class="p">{{ item['data'] }}</p>
-                    <form action="/achados_perdidos" method="POST">
-                        <input type="hidden" name="id" value="{{ item['id'] }}">
-                        <input type="hidden" name="encontrado" value="False">
-                        <input type="submit" value="&#10003;"></form>
-                    </form>
-                </li>
-                {% endif %}
-            {% endfor %}
-            </ul>
+            
         </div>
 
     </body>

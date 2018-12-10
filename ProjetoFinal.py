@@ -10,6 +10,7 @@ Projeto Final de Design de Software
 """
 
 from flask import Flask, render_template, request
+from flask import redirect, url_for
 app = Flask(__name__)
 
 itens=[]
@@ -51,15 +52,17 @@ def Achados_Perdidos():
         
 
     if request.method == 'POST':
+    
         nome = request.form['nome']
-        item = request.form['item']
+        item1 = request.form['item']
         data = request.form['data']
         lugar = request.form['lugar']
+        
         
         novo_item = {
             'id':len(itens),
             'nome': nome,
-            'item': item,
+            'item': item1,
             'data': data,
             'lugar': lugar,
             'encontrado': False,
@@ -68,7 +71,7 @@ def Achados_Perdidos():
         if len(nome)==0:
             mensagem_erro_nome= 'Favor insira o nome do proprietário, caso não saiba digite n'
             tem_erro=True
-        if len(item)==0:
+        if len(item1)==0:
             mensagem_erro_item='Favor digite qual item foi encontrado'
         if len(data) == 0:
             mensagem_erro_data = 'Favor inserir uma data'
@@ -171,20 +174,22 @@ def login():
     error = None
     home = ''
     if request.method == 'POST':
-        for username in arquivo_firebase['login']:
+        
+        for ids in arquivo_firebase['login'].keys():
+            for username in arquivo_firebase['login'][ids]:
             
             
-            if request.form['username']  not in arquivo_firebase['login'].keys() or request.form['password'] != arquivo_firebase['login'][username]['senha']:
-                error = 'Login ou senha inválido. Tente novamente.'
-            else:
-                home='home'
+                if request.form['username']  not in arquivo_firebase['login'][ids].keys() or request.form['password'] != arquivo_firebase['login'][ids][username]['senha']:
+                    error = 'Login ou senha inválido. Tente novamente.'
+                else:
+                    home='home'
                 
     return render_template('login.html', error=error, home=home)
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     error = None
-    login = 'cadastro'
+    print(request.form)
     if request.method == 'POST':
         username=request.form['username1']
         senha=request.form['password1']
@@ -194,25 +199,27 @@ def cadastro():
             'senha': senha,
         },
         }
-            
         erroo=False   
-        if username in arquivo_firebase['login'].keys() :
+        if username in arquivo_firebase['login'] :
             error = 'Este nome de usuário já existe.'
             erroo=True
-        if len(request.form['senha'])<5:
+        if len(senha)<5:
             error = 'A sua senha deve ter no mínimo 5 caracteres'
             erroo=True
         if not erroo:
-            login='mensagem'
+
             logins.append(novo_login)
+            print(logins)
             arquivo_firebase['login']=logins
             firebase.patch('https://projetofinal-dessoft.firebaseio.com/', arquivo_firebase )
+            redirect(url_for('mensagem'))
                 
                 
-    return render_template('cadastro.html', error=error, login=login)
+    return render_template('cadastro.html', error=error)
 
 @app.route("/mensagem", methods=['POST', 'GET'])
 def mensagem():
+    
     return render_template('mensagem_sucesso.html')
 
 

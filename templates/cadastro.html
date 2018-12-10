@@ -16,12 +16,12 @@
                   <h1>Faça o seu cadastro</h1>
                    <h2 class="title">Cadastro</h2>
                   <br>
-                  <form action="/mensagem" method="POST">
+                  <form action="/cadastro" method="POST">
                     <input type="text" placeholder="Username" name="username1" value="{{
                       request.form.username1 }}">
                      <input type="password" placeholder="Password" name="password1" value="{{
                       request.form.password1 }}">
-                    <input class="btn btn-default" type="submit" value="Criar Conta">
+                    <input class="btn btn-default" type="submit" value="&#10003;">
                   </form>
                   {% if error %}
                     <p class="error"><strong>Error:</strong> {{ error }}
